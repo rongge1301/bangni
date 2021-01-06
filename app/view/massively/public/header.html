@@ -1,0 +1,21 @@
+<nav id="nav">
+  <ul class="links">
+    {% for cate in navigation %}
+    {% if cate.parentId == '0' %}
+    <li class="nav-{{slug}}"><a href="{{cate.url}}">{{cate.name}}</a></li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+  <ul class="icons">
+    {% if site.twitter %}
+    <li><a href="{{site.twitter}}" class="icon fa-twitter" title="Twitter"><span class="label">Twitter</span></a>
+    </li>
+    {% endif %}
+    {% if site.facebook %}
+    <li><a href="{{site.facebook}}" class="icon fa-facebook" title="Facebook"><span
+          class="label">Facebook</span></a></li>
+    {% endif %}
+    <li><a href="###" class="icon fa-rss" target="_blank" rel="noopener"><span class="label" title="RSS">RSS</span></a>
+    </li>
+  </ul>
+</nav>
