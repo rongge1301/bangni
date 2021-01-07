@@ -1,6 +1,6 @@
 /*
- * @Author: doramart 
- * @Date: 2019-06-18 17:27:24 
+ * @Author: doramart
+ * @Date: 2019-06-18 17:27:24
  * @Last Modified by: doramart
  * @Last Modified time: 2020-05-14 12:27:28
  */
@@ -183,6 +183,7 @@ global.recommend = function (appCtx) {
     this.tags = ['recommend'];
 
     this.parse = function (parser, nodes, lexer) {
+        console.log(parser)
         var tok = parser.nextToken();
         var args = parser.parseSignature(null, true);
         parser.advanceAfterBlockEnd(tok.value);
@@ -190,7 +191,6 @@ global.recommend = function (appCtx) {
     };
 
     this.run = async (context, args, callback) => {
-
         try {
             await _renderContentCtx(appCtx, context, args, 'recommend')
             return callback(null, '');

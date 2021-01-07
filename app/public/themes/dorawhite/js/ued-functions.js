@@ -1,6 +1,6 @@
 /*dede58.com 做最好的织梦整站模板下载网站*/
 $(function(){
-	
+
 	//设置第一屏高度
 	var iHeight = $(window).height()-120;
 	var iWidth =  $(window).width();
@@ -28,13 +28,13 @@ $(function(){
 	$('.slick').slick({
 		dots: true,
 		arrows:false,
-		autoplay:true,
+		autoplay:false,
 		autoplaySpeed:8000
 	});
-	
+
 	//变化头部导航样式
-	$(window).scroll(function () { 
-		st = $(window).scrollTop(); 
+	$(window).scroll(function () {
+		st = $(window).scrollTop();
 		if (st>0)
 		{
 			$("#Fixheader").addClass("Ued-header-scroll");
@@ -52,7 +52,7 @@ $(function(){
 			'side':'right',
 			'touch':false,
 	        'tolerance': 70
-			
+
 	      });
 
 	     $('.toggle-btn').click(function() {
@@ -64,11 +64,11 @@ $(function(){
 	      });
 
 	     function aload(t){"use strict";t=t||window.document.querySelectorAll("[data-aload]"),void 0===t.length&&(t=[t]);var a,e=0,r=t.length;for(e;r>e;e+=1)a=t[e],a["LINK"!==a.tagName?"src":"href"]=a.getAttribute("data-aload"),a.removeAttribute("data-aload");return t}
-	    
+
 		window.onload = function(){
 	    	aload();
 	    }
-		
-		
+
+
 
 });

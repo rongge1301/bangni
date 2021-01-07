@@ -1,3 +1,8 @@
+##变量
+```$xslt
+staticThemePath //静态资源路径
+```
+
 # Notice: DoraCMS SQL (基于sequelize) 已发布，开源无限制可商用，觉得好请记得 star 哟！
 [DoraCMS mysql 源码](https://github.com/doramart/DoraCMS-SQL)   
 [DoraCMS mysql 版本预览](https://sql.html-js.cn/) 

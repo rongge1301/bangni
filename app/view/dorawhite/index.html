@@ -2,22 +2,23 @@
 <html lang="zh-CN">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="author" content="order by dede58.com/" />
-<meta name="author" content="order by dede58.com/" />
-<title>html5响应式互联网科技公司中文网站模板</title>
+<title>邦尼科技有限公司</title>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
-<meta name="description" content="响应式互联网科技公司中文网站模板。">
-<meta name="keywords" content="高端,大气,互联网,科技公司,响应式网站,模板下载">
+<meta name="description" content="">
+<meta name="keywords" content="高">
 <meta name="robots" content="index,follow">
 <link rel="apple-touch-icon" href="temp/apple-touch-icon-152x152.png" sizes="152x152" >
-<!--[if lte IE 8]><script src="js/html5shiv.js" type="text/javascript"></script><![endif]-->
-<link rel="stylesheet" type="text/css" href="css/mobile.css" />
-<link rel="stylesheet" type="text/css" href="css/slick.css" />
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
 	{% header adaptor="default" %}
 
 	<!-- 二次开发静态资源 -->
-	{% assets 'main.css' %}
+	{% assets 'main.css mobile.css slick.css' %}
+	{% endassets %}
+
+	{% assets 'html5shiv.js' %}
 	{% endassets %}
 
 	{% endheader %}
@@ -28,7 +29,9 @@
 	<!--头部模块-->
 	<header class="Ued-header" id="Fixheader">
 		<div class="container">
-			<h1><a href="index.html" class="logo" title="XX互动，南京靠谱的UE/UI设计与WEB/APP开发外包公司">XX互动</a></h1>
+			<h1><a href="index.html" class="logo">
+				<img src="{{staticThemePath}}/images/logo.png" alt="">
+			</a></h1>
 			<ul class="nav">
 				<li><a href="index.html" class="current">首页</a></li>
 				<li><a href="service.html">服务</a></li>
@@ -50,7 +53,22 @@
 	<!--滑动模块-->
 	<div class="Ued-slider" id="Slider-index">
 		<div class="slick">
-			<div class="slidbox"  style="background-image:url('images/slider_index_02.jpg');">
+			{% recommend pageSize=6 %}
+			{% for item in recommend %}
+			<div class="slidbox"  style="background-image:url('{{item.sImg}}');">
+				<div class="container">
+					<div class="show-txtstyle-center fwhite f-family">
+						<h1 class="f64">{{item.title}}</h1>
+						<h1 class="f48">{{item.discription}}</h1>
+					</div>
+
+					<img src="{{item.sImg}}" alt="" style="position: absolute;left: 0;top:0;">
+				</div>
+			</div>
+			{% endfor %}
+
+
+			<!--<div class="slidbox"  style="background-image:url('{{staticThemePath}}/images/slider_index_02.jpg');">
 				<div class="container">
 					<div class="show-txtstyle-center fwhite f-family">
 						<h1 class="f64">UED INTERACTION</h1>
@@ -58,7 +76,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="slidbox"  style="background-image:url('images/slider_index_01.jpg');">
+			<div class="slidbox"  style="background-image:url('{{staticThemePath}}/images/slider_index_01.jpg');">
 				<div class="container">
 					<div class="show-txtstyle-center fwhite f-family">
 						<h1 class="f64">2016</h1>
@@ -67,7 +85,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="slidbox"  style="background-image:url('images/slider_case_02.jpg');">
+			<div class="slidbox"  style="background-image:url('{{staticThemePath}}/images/slider_case_02.jpg');">
 				<div class="container">
 					<div class="show-txtstyle-center show-txt-left fwhite">
 						<h2 class="f48 f-family">江苏钱旺集团官网<br/>Wap版</h2>
@@ -77,7 +95,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="slidbox"  style="background-image:url('images/slider_case_03.jpg');">
+			<div class="slidbox"  style="background-image:url('{{staticThemePath}}/images/slider_case_03.jpg');">
 				<div class="container">
 				<div class="show-txtstyle-center fwhite">
 					<h1><img src="picture/icons_workface.png" style="width:1.6rem;margin:0 auto .12rem;" /></h1>
@@ -86,7 +104,7 @@
 					<p class="btn-box"><a href="javascript:;" class="comm-Btn Btn-red">案例详情</a></p>
 				</div>
 				</div>
-			</div>
+			</div>-->
 		</div>
 	</div>
 	<!--//滑动模块-->
@@ -125,9 +143,20 @@
 	<!--案例模块-->
 	<div class="Ued-case">
 		<div class="container">
-			<h3 class="title-index"><span class="f32">精彩案例</span><em class="f16">Wonderful Cases</em><i></i></h3>
+			<h3 class="title-index"><span class="f32">产品中心</span><em class="f16">Wonderful Cases</em><i></i></h3>
 			<ul class="case-list clearfix">
+				{% news key="nodejs", pageSize=6,typeId="gu16MRzrk" %}
+				{% for item in nodejs %}
+<!--				<li><a href="{{item.url}}" target="_blank">{{item.stitle}}</a></li>-->
 				<li>
+					<a href="javascript:;">
+						<img src="{{item.sImg}}"/>
+						<h4 class="f22">{{item.title}}</h4>
+						<p class="f14">{{item.discription}}</p>
+					</a>
+				</li>
+				{% endfor %}
+				<!--<li>
 					<a href="javascript:;" title="，提供的钱宝网APP设计与开发服务">
 						<img src="picture/case01.jpg" alt=",出品的钱宝网作品|UI设计|APP设计|APP开发|手机客户端|html5/CSS3"/>
 						<h4 class="f22">钱宝网宝购大厅移动端</h4>
@@ -168,7 +197,7 @@
 						<h4 class="f22">GDFS_全球免税跨境电商</h4>
 						<p class="f14">GDFS全球免税跨境电商，为用户提供品质卓越的免税产品及会员服务</p>
 					</a>
-				</li>
+				</li>-->
 			</ul>
 		</div>
 	</div>
@@ -269,10 +298,11 @@
 	</div>
 </div>
 <!--//移动端右侧菜单-->
-<script src="js/jquery-1.9.1.min.js"></script>
-<script src="js/slick.min.js"></script>
-<script src="js/slideout.min.js"></script>
-<script src="js/ued-functions.js"></script>
+{% header adaptor="default" %}
 
+{% assets 'jquery-1.9.1.min.js slick.min.js slideout.min.js ued-functions.js index.js' %}
+{% endassets %}
+
+{% endheader %}
 </body>
 </html>

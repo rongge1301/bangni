@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5, h6{margin:0 0 .12rem; font-size:.14rem; }
 .f32{font-size:.24rem;}
 .f28{font-size:.22rem;}
 .f24{font-size:.20rem;}
-.f22{font-size:.16rem;} 
+.f22{font-size:.16rem;}
 .f18{font-size:.15rem;}
 .f16{font-size:.14rem;}
 .f15{font-size:.14rem;}
@@ -39,7 +39,7 @@ h1, h2, h3, h4, h5, h6{margin:0 0 .12rem; font-size:.14rem; }
 .Ued-header h1 a.logo{width:40px; height:40px; background-size:40px 40px;}
 .Ued-header ul.nav{display:none;}
 .Ued-header-scroll{padding-top:10px; padding-bottom:10px; height:60px;background:rgba(255,255,255,.96);}
-.Ued-header-scroll h1 a.logo{display:block; width:176px; height:40px; text-indent:-9999px; background:url(../images/logo_txt_2x.png) no-repeat center; background-size:176px 40px;}
+.Ued-header-scroll h1 a.logo{display:block; width:176px; height:40px; text-indent:-9999px; background:url(app/public/themes/dorawhite/images/logo_txt_2x.png) no-repeat center; background-size:176px 40px;}
 
 /*right menu*/
 .menu,.slideout-menu {position:fixed; top:0;bottom:0;right:0;z-index:0; width:256px; overflow-y:scroll; -webkit-overflow-scrolling:touch; display:none;}
@@ -50,8 +50,8 @@ h1, h2, h3, h4, h5, h6{margin:0 0 .12rem; font-size:.14rem; }
 .Ued-mobile-nav{padding:.2rem 0 .2rem .2rem; color:#ccc; background:#7b7d7a;}
 .mobile-nav-list{margin:0 0 .4rem;}
 .mobile-nav-list li a,.mobile-nav-list li a:hover{padding:0; display:block; font-size:.16rem; line-height:.50rem; color:#eee; text-decoration:none;}
-.mobile-nav-list li a.cicon-qq{display:block; width:44px; height:44px; margin:0; background:url(../images/cicon_bg_qq.png) no-repeat -10px 0px; background-size:44px; text-indent:-9999px; -moz-transition:all 0.3s;-webkit-transition:all 0.3s;-o-transition:all 0.3s;-ms-transition:all 0.3s;transition:all 0.3s;}
-.mobile-nav-list li a.cicon-qq:hover{background:url(../images/cicon_bg_qq.png) no-repeat -10px -44px; background-size:44px;  -moz-transition:all 0.3s;-webkit-transition:all 0.3s;-o-transition:all 0.3s;-ms-transition:all 0.3s;transition:all 0.3s;}
+.mobile-nav-list li a.cicon-qq{display:block; width:44px; height:44px; margin:0; background:url(app/public/themes/dorawhite/images/cicon_bg_qq.png) no-repeat -10px 0px; background-size:44px; text-indent:-9999px; -moz-transition:all 0.3s;-webkit-transition:all 0.3s;-o-transition:all 0.3s;-ms-transition:all 0.3s;transition:all 0.3s;}
+.mobile-nav-list li a.cicon-qq:hover{background:url(app/public/themes/dorawhite/images/cicon_bg_qq.png) no-repeat -10px -44px; background-size:44px;  -moz-transition:all 0.3s;-webkit-transition:all 0.3s;-o-transition:all 0.3s;-ms-transition:all 0.3s;transition:all 0.3s;}
 .mobile-nav-list li a.current,.Mobile-nav-list li a.current:hover{font-weight:600; color:#fff;}
 .site-infor{padding:.12rem 0; border-top:1px solid #999;}
 
@@ -66,7 +66,7 @@ h1, h2, h3, h4, h5, h6{margin:0 0 .12rem; font-size:.14rem; }
 .footer-nav li{width:100%; padding:0;}
 .footer-nav li a{line-height:.5rem; font-size:.16rem; }
 .footer-nav li a:hover{text-decoration:none; color:#ccc;}
-.logo-en{margin:.3rem 0 .12rem; display:block; width:238px; height:18px; background:url(../images/logo_en_2x.png) no-repeat center top; background-size:238px 18px;}
+.logo-en{margin:.3rem 0 .12rem; display:block; width:238px; height:18px; background:url(app/public/themes/dorawhite/images/logo_en_2x.png) no-repeat center top; background-size:238px 18px;}
 .fr{float:left;}
 .tright{text-align:left;}
 .statement{clear:both; padding:.12rem; line-height:20px; font-size:.12rem; text-align:left; color:#fff; background:#8a8a8a;}
@@ -79,17 +79,17 @@ h1, h2, h3, h4, h5, h6{margin:0 0 .12rem; font-size:.14rem; }
 .Ued-service-item .container{padding:0;}
 .service-item li{width:100%; border-left:0px solid #ddd; border-bottom:1px solid #ddd; }
 .service-item li:last-child{border-right:0px solid #ddd;}
-.service-item li a,.service-item li a:hover{padding:.2rem; display:block; text-decoration:none; text-align:left; background-image:url(../images/arr_comm.png); background-repeat:no-repeat; background-position:94% center; background-size:.22rem;}
+.service-item li a,.service-item li a:hover{padding:.2rem; display:block; text-decoration:none; text-align:left; background-image:url(app/public/themes/dorawhite/images/arr_comm.png); background-repeat:no-repeat; background-position:94% center; background-size:.22rem;}
 .service-item li a span{padding:.06rem .06rem .06rem .7rem;}
 .service-item li a span h3{line-height:.26rem;}
 .service-item li a span p{line-height:.2rem;}
 
-.service-item li a span.service-ue{background:url(../images/icon_ue.png) no-repeat 0px 0px; background-size:.5rem;}
-.service-item li a:hover span.service-ue{background:url(../images/icon_ue.png) no-repeat 0px -.5rem; background-size:.5rem;}
-.service-item li a span.service-ui{background:url(../images/icon_ui.png)  no-repeat 0px 0px; background-size:.5rem;}
-.service-item li a:hover span.service-ui{background:url(../images/icon_ui.png)  no-repeat 0px -.5rem; background-size:.5rem; }
-.service-item li a span.service-dev{background:url(../images/icon_dev.png) no-repeat 0px 0px; background-size:.5rem;}
-.service-item li a:hover span.service-dev{background:url(../images/icon_dev.png) no-repeat 0px -.5rem; background-size:.5rem; }
+.service-item li a span.service-ue{background:url(app/public/themes/dorawhite/images/icon_ue.png) no-repeat 0px 0px; background-size:.5rem;}
+.service-item li a:hover span.service-ue{background:url(app/public/themes/dorawhite/images/icon_ue.png) no-repeat 0px -.5rem; background-size:.5rem;}
+.service-item li a span.service-ui{background:url(app/public/themes/dorawhite/images/icon_ui.png)  no-repeat 0px 0px; background-size:.5rem;}
+.service-item li a:hover span.service-ui{background:url(app/public/themes/dorawhite/images/icon_ui.png)  no-repeat 0px -.5rem; background-size:.5rem; }
+.service-item li a span.service-dev{background:url(app/public/themes/dorawhite/images/icon_dev.png) no-repeat 0px 0px; background-size:.5rem;}
+.service-item li a:hover span.service-dev{background:url(app/public/themes/dorawhite/images/icon_dev.png) no-repeat 0px -.5rem; background-size:.5rem; }
 
 /* case*/
 .Ued-case .container{padding:0;}
