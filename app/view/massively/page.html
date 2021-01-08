@@ -1,0 +1,25 @@
+{% extends "./default.html" %} {% block content %}
+
+<article id="main">
+    <div class="blogs main-detailbox ">
+
+        <div class="blogs-box whitebg">
+            <div class="news-title">
+                <h2>
+                    {% if pageType == 'search' %}
+                    搜索：{{targetSearchKey}}
+                    {% elif pageType == 'tag' %}
+                    标签：{{targetTagName}}
+                    {% else %}
+                    {{cateInfo.name}}
+                    {% endif %}
+                </h2>
+            </div>
+            {% include "./public/itemListTemp.html" %}
+
+        </div>
+    </div>
+
+</article>
+<div class="clear blank"></div>
+{% endblock %}
