@@ -1,4 +1,4 @@
-/*dede58.com 做最好的织梦整站模板下载网站*/
+
 $(function(){
 
 	//设置第一屏高度
@@ -68,7 +68,4 @@ $(function(){
 		window.onload = function(){
 	    	aload();
 	    }
-
-
-
 });

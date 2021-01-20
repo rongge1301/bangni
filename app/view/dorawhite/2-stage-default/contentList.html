@@ -27,10 +27,8 @@
         <div class="container">
             <ul class="f16" >
                 <li class="fxui-tab-tit"><a href="#1">全部</a></li>
-                <li  v-for="item in productList"  class="fxui-tab-tit"><a href="#1">网站</a></li>
-                <li class="fxui-tab-tit"><a href="#1">移动</a></li>
-                <li class="fxui-tab-tit"><a href="#1">系统</a></li>
-                <li class="fxui-tab-tit"><a href="#1">车载</a></li>
+                <li class="fxui-tab-tit"><a href="#2">KISS&TELL</a></li>
+                <li class="fxui-tab-tit"><a href="#3" @click="alert(1)">P4</a></li>
             </ul>
         </div>
     </div>
@@ -40,281 +38,22 @@
         <div class="container" >
             <!--全部-->
             <ul class="case-list clearfix fxui-tab-nav">
+                {% news pageSize=100 %}
+                {% for item in news %}
                 <li>
-                    <a href="javascript:;">
-                        <img src="picture/case01.jpg" alt="钱宝网,web app,app开发,html5前端开发"/>
-                        <h4 class="f22">钱宝网宝购大厅移动端</h4>
-                        <p class="f14">钱宝网宝购大厅移动客户端基于Web App的设计与开发。钱宝网，前往未来的力量</p>
+                    <a href="{{item.url}}">
+                        <img src="{{item.sImg}}" alt="kiss & tell"/>
+                        <h4 class="f22">{{item.stitle}}</h4>
+                        <p class="f14">{{item.discription}}</p>
                     </a>
                 </li>
-                <li>
-                    <a href="soon.html">
-                        <img src="picture/case06.jpg" alt="南京和地利进出口贸易公司,网站设计,网站开发,php开发"/>
-                        <h4 class="f22">南京和地利进出口贸易公司网站</h4>
-                        <p class="f14">一家专业从事代理咨询服务的企业。江苏出入境检验检疫局和江苏省商务厅长期合作伙伴。</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:;">
-                        <img src="picture/case03.jpg"  alt="钱宝网,app设计,web app,app开发,html5前端开发" />
-                        <h4 class="f22">钱宝网雷拍频道移动端</h4>
-                        <p class="f14">钱宝网雷拍移动客户端基于Web App的设计与开发。钱宝网，前往未来的力量</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="soon.html">
-                        <img src="picture/case04.jpg" alt="最邮轮旅行网,网站设计,网站开发,java开发,系统开发"/>
-                        <h4 class="f22">最邮轮旅行网</h4>
-                        <p class="f14">最邮轮旅行网为你提供专业的全球邮轮中文预订服务，产品包括全球十大邮轮品牌、九大邮轮航线</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:;">
-                        <img src="picture/case02.jpg" alt="房禧通App客户端,app设计,ios/android设计开发"/>
-                        <h4 class="f22">房禧通App客户端</h4>
-                        <p class="f14">买房子、卖房子，更多房源就在房禧通。一键直达，您的专属房产经纪人</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="soon.html">
-                        <img src="picture/case05.jpg"  alt="GDFS_全球免税跨境电商,网站设计,网站开发,java开发,系统开发"/>
-                        <h4 class="f22">GDFS_全球免税跨境电商</h4>
-                        <p class="f14">GDFS全球免税跨境电商，为用户提供品质卓越的免税产品及会员服务</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="soon.html">
-                        <img src="picture/case07.jpg" alt="汇慧康健康交流微信公众号,微信公众号,微信开发" />
-                        <h4 class="f22">汇慧康健康交流微信公众号</h4>
-                        <p class="f14">为医生与患者搭建方便快捷的沟通桥梁，开启智慧医疗新时代</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:;">
-                        <img src="picture/case08.jpg" alt="江苏钱旺集团官网Wap版,wap开发,html5/css3,前端开发"/>
-                        <h4 class="f22">江苏钱旺集团官网Wap版</h4>
-                        <p class="f14">钱旺，前往未来的力量</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:;">
-                        <img src="picture/case09.jpg" alt="WorkFace官方网站,企业官网,网站开发,网站设计,php开发"/>
-                        <h4 class="f22">WorkFace官方网站</h4>
-                        <p class="f14">职业面孔-上海商务人像摄影。拍照我们是认真的。</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="soon.html">
-                        <img src="picture/case10.jpg" alt="江苏教育考试院信息管理系统,网站设计,网站开发,java开发,系统开发"/>
-                        <h4 class="f22">江苏教育考试院信息管理系统</h4>
-                        <p class="f14">为江苏省教育考试院，研发江苏院校考生考务信息查询管理系统</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="soon.html">
-                        <img src="picture/case13.jpg" alt="LinkHere 灵犀,app设计,app开发,ios/android开发"/>
-                        <h4 class="f22">LinkHere 灵犀</h4>
-                        <p class="f14">随时随地遇见真实身份的业内人士，让名片社交无纸化。Link Here Right Here </p>
-                    </a>
-                </li>
-                <li>
-                    <a href="soon.html">
-                        <img src="picture/case14.jpg" alt="香港皇家联合金融集团官方网站,企业官网,网站开发,网站设计,php开发"/>
-                        <h4 class="f22">香港皇家联合金融集团官方网站</h4>
-                        <p class="f14">皇家聯合金融集團，匯聚香港金融業界精英。爲您提供專業資產管理以及移民移居服務</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="soon.html">
-                        <img src="picture/case11.jpg" alt="中储智运物流电子商务平台,网站设计,网站开发,java开发,系统开发"/>
-                        <h4 class="f22">中储智运物流电子商务平台</h4>
-                        <p class="f14">中储南京智慧物流科技有限公司，首创B w B新型电子商务模式的智慧物流电子商务平台</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="soon.html">
-                        <img src="picture/case12.jpg" alt="涌嘉保险经纪综合信息管理平台,网站设计,网站开发,java开发,系统开发" />
-                        <h4 class="f22">涌嘉保险经纪综合信息管理平台</h4>
-                        <p class="f14">为涌嘉保险经纪公司设计开发基于B/S架构的内部综合信息管理平台</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="soon.html">
-                        <img src="picture/case15.jpg" alt="中盛光电官方网站,企业官网,网站开发,网站设计,php开发"/>
-                        <h4 class="f22">中盛光电官方网站</h4>
-                        <p class="f14">中盛新能源致力于通过在全球范围内提供绿色智能化能源解决方案满足顾客日益丰富多样的能源需求</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="soon.html">
-                        <img src="picture/case16.jpg" alt="路畅智能互联网导航,ui设计,车载系统,界面设计,软件设计"/>
-                        <h4 class="f22">路畅智能互联网导航视觉设计</h4>
-                        <p class="f14">针对路畅智能导航仪，定制设计人机交互界面，情感化设计，对车主满满的关爱</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="soon.html">
-                        <img src="picture/case17.jpg" alt="沛合健康管理客户端,app设计,app开发,java开发,系统开发" />
-                        <h4 class="f22">沛合健康管理客户端</h4>
-                        <p class="f14">沛合健康管理APP，为您健康医疗，保险理赔，提供方便快捷的移动互联网服务</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="soon.html">
-                        <img src="picture/case18.jpg" alt="电信天翼新世纪音乐微营销活动,微信公众号,微信开发,微信营销活动"/>
-                        <h4 class="f22">电信天翼新世纪音乐微营销活动</h4>
-                        <p class="f14">静心聆听，翼支付。带你走进，一场洁净心灵的，音乐盛宴</p>
-                    </a>
-                </li>
+                {% endfor %}
             </ul>
             <!--//全部-->
-            <!--网站-->
-            <ul class="case-list clearfix fxui-tab-nav">
-
-                <li>
-                    <a href="soon.html">
-                        <img src="picture/case06.jpg" alt="南京和地利进出口贸易公司,网站设计,网站开发,php开发"/>
-                        <h4 class="f22">南京和地利进出口贸易公司网站</h4>
-                        <p class="f14">一家专业从事代理咨询服务的企业。江苏出入境检验检疫局和江苏省商务厅长期合作伙伴。</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="soon.html">
-                        <img src="picture/case04.jpg"  alt="最邮轮旅行网,网站设计,网站开发,java开发,系统开发"/>
-                        <h4 class="f22">最邮轮旅行网</h4>
-                        <p class="f14">最邮轮旅行网为你提供专业的全球邮轮中文预订服务，产品包括全球十大邮轮品牌、九大邮轮航线</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="soon.html">
-                        <img src="picture/case05.jpg"  alt="GDFS_全球免税跨境电商,网站设计,网站开发,java开发,系统开发"/>
-                        <h4 class="f22">GDFS_全球免税跨境电商</h4>
-                        <p class="f14">GDFS全球免税跨境电商，为用户提供品质卓越的免税产品及会员服务</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:;">
-                        <img src="picture/case09.jpg" alt="WorkFace官方网站,企业官网,网站开发,网站设计,php开发" />
-                        <h4 class="f22">WorkFace官方网站</h4>
-                        <p class="f14">职业面孔-上海商务人像摄影。拍照我们是认真的。</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="soon.html">
-                        <img src="picture/case14.jpg" alt="香港皇家联合金融集团官方网站,企业官网,网站开发,网站设计,php开发"/>
-                        <h4 class="f22">香港皇家联合金融集团官方网站</h4>
-                        <p class="f14">皇家聯合金融集團，匯聚香港金融業界精英。爲您提供專業資產管理以及移民移居服務</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="soon.html">
-                        <img src="picture/case15.jpg" alt="中盛光电官方网站,企业官网,网站开发,网站设计,php开发" />
-                        <h4 class="f22">中盛光电官方网站</h4>
-                        <p class="f14">中盛新能源致力于通过在全球范围内提供绿色智能化能源解决方案满足顾客日益丰富多样的能源需求</p>
-                    </a>
-                </li>
-            </ul>
-            <!--//网站-->
-            <!--移动-->
-            <ul class="case-list clearfix fxui-tab-nav">
-                <li>
-                    <a href="javascript:;">
-                        <img src="picture/case01.jpg"  alt="钱宝网,web app,app开发,html5前端开发" />
-                        <h4 class="f22">钱宝网宝购大厅移动端</h4>
-                        <p class="f14">钱宝网宝购大厅移动客户端基于Web App的设计与开发。钱宝网，前往未来的力量</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:;">
-                        <img src="picture/case03.jpg"  alt="钱宝网,app设计,web app,app开发,html5前端开发"/>
-                        <h4 class="f22">钱宝网雷拍频道移动端</h4>
-                        <p class="f14">钱宝网雷拍移动客户端基于Web App的设计与开发。钱宝网，前往未来的力量</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:;">
-                        <img src="picture/case02.jpg"  alt="房禧通App客户端,app设计,ios/android设计开发"/>
-                        <h4 class="f22">房禧通App客户端</h4>
-                        <p class="f14">买房子、卖房子，更多房源就在房禧通。一键直达，您的专属房产经纪人</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="soon.html">
-                        <img src="picture/case07.jpg" alt="汇慧康健康交流微信公众号,微信公众号,微信开发" />
-                        <h4 class="f22">汇慧康健康交流微信公众号</h4>
-                        <p class="f14">为医生与患者搭建方便快捷的沟通桥梁，开启智慧医疗新时代</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:;">
-                        <img src="picture/case08.jpg" alt="江苏钱旺集团官网Wap版,wap开发,html5/css3,前端开发"/>
-                        <h4 class="f22">江苏钱旺集团官网Wap版</h4>
-                        <p class="f14">钱旺，前往未来的力量</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="soon.html">
-                        <img src="picture/case13.jpg" alt="LinkHere 灵犀,app设计,app开发,ios/android开发"/>
-                        <h4 class="f22">LinkHere 灵犀</h4>
-                        <p class="f14">随时随地遇见真实身份的业内人士，让名片社交无纸化。Link Here Right Here </p>
-                    </a>
-                </li>
-                <li>
-                    <a href="soon.html">
-                        <img src="picture/case17.jpg"  alt="沛合健康管理客户端,app设计,app开发,java开发,系统开发"/>
-                        <h4 class="f22">沛合健康管理客户端</h4>
-                        <p class="f14">沛合健康管理APP，为您健康医疗，保险理赔，提供方便快捷的移动互联网服务</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="soon.html">
-                        <img src="picture/case18.jpg" alt="电信天翼新世纪音乐微营销活动,微信公众号,微信开发,微信营销活动" />
-                        <h4 class="f22">电信天翼新世纪音乐微营销活动</h4>
-                        <p class="f14">静心聆听，翼支付。带你走进，一场洁净心灵的，音乐盛宴</p>
-                    </a>
-                </li>
-            </ul>
-            <!--//移动-->
-            <!--系统-->
-            <ul class="case-list clearfix fxui-tab-nav">
-                <li>
-                    <a href="soon.html">
-                        <img src="picture/case10.jpg" alt="江苏教育考试院信息管理系统,网站设计,网站开发,java开发,系统开发"/>
-                        <h4 class="f22">江苏教育考试院信息管理系统</h4>
-                        <p class="f14">为江苏省教育考试院，研发江苏院校考生考务信息查询管理系统</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="soon.html">
-                        <img src="picture/case11.jpg" alt="中储智运物流电子商务平台,网站设计,网站开发,java开发,系统开发"/>
-                        <h4 class="f22">中储智运物流电子商务平台</h4>
-                        <p class="f14">中储南京智慧物流科技有限公司，首创B w B新型电子商务模式的智慧物流电子商务平台</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="soon.html">
-                        <img src="picture/case12.jpg" alt="涌嘉保险经纪综合信息管理平台,网站设计,网站开发,java开发,系统开发" />
-                        <h4 class="f22">涌嘉保险经纪综合信息管理平台</h4>
-                        <p class="f14">为涌嘉保险经纪公司设计开发基于B/S架构的内部综合信息管理平台</p>
-                    </a>
-                </li>
-            </ul>
-            <!--//系统-->
-            <!--车载-->
-            <ul class="case-list clearfix fxui-tab-nav">
-                <li>
-                    <a href="soon.html">
-                        <img src="picture/case16.jpg" alt="路畅智能互联网导航,ui设计,车载系统,界面设计,软件设计"/>
-                        <h4 class="f22">路畅智能互联网导航视觉设计</h4>
-                        <p class="f14">针对路畅智能导航仪，定制设计人机交互界面，情感化设计，对车主满满的关爱</p>
-                    </a>
-                </li>
-
-            </ul>
-            <!--//车载-->
         </div>
     </div>
     <!--//案例列表-->
 </div>
 <!--------//案例总--------->
 {% endblock %}
+

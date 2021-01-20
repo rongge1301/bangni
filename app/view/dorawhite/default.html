@@ -12,27 +12,26 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-    {% header adaptor="default" %}
-
     <!-- 二次开发静态资源 -->
     {% assets 'main.css mobile.css slick.css' %}
     {% endassets %}
 
     {% assets 'jquery-1.9.1.min.js' %}
     {% endassets %}
-
-    {% endheader %}
 </head>
 
 <body>
     <!--主体-->
     <div class="Ued-warp panel" id="main">
+
         <!--头部模块-->
         {% include "./public/header.html" %}
         <!--//头部模块-->
+
         <!--手机端菜单按钮-->`
         {% include "./public/mobile_menu.html" %}
         <!--//手机端菜单按钮-->
+
         {% block content %}{% endblock %}
 
         <!--底部模块-->
@@ -56,12 +55,8 @@
         </div>
     </div>
 </body>
-{% header adaptor="default" %}
-
 {% assets 'slick.min.js slideout.min.js ued-functions.js index.js jquery.fxtab.js' %}
 {% endassets %}
-
-{% endheader %}
 
 <script>
     $(function(){
