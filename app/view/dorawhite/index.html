@@ -1,0 +1,175 @@
+
+{% extends "./default.html" %}
+{% block content %}
+
+<!--滑动模块-->
+<div class="Ued-slider" id="Slider-index">
+	<div class="slick">
+		{% recommend pageSize=6 %}
+		{% for item in recommend %}
+		<div class="slidbox"  style="background-image:url({{item.sImg | replace('\\','/')}});">
+			<div class="container">
+				<div class="show-txtstyle-center fwhite f-family">
+					<h1 class="f64">{{item.title}}</h1>
+					<h1 class="f48">{{item.discription}}</h1>
+				</div>
+
+<!--				<img src="{{item.sImg}}" alt="" style="position: absolute;left: 0;top:0;">-->
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+</div>
+<!--//滑动模块-->
+<!--服务项目模块-->
+<div class="Ued-service-item bg-white">
+	<div class="container">
+		<ul class="service-item clearfix">
+			<li>
+				<a href="service.html#1">
+					<span class="service-ue">
+						<h3 class="f32">用户体验策略</h3>
+						<p class="f16">User Experience</p>
+					</span>
+				</a>
+			</li>
+			<li>
+				<a href="service.html#2">
+					<span  class="service-ui">
+						<h3 class="f32">界面视觉设计</h3>
+						<p class="f16">User Interface Design</p>
+					</span>
+				</a>
+			</li>
+			<li>
+				<a href="service.html#3">
+					<span class="service-dev">
+						<h3 class="f32">应用程序开发</h3>
+						<p class="f16">App Development</p>
+					</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<!--//服务项目模块-->
+<!--案例模块-->
+<div class="Ued-case">
+	<div class="container">
+		<h3 class="title-index"><span class="f32">产品中心</span><em class="f16">Wonderful Cases</em><i></i></h3>
+		<ul class="case-list clearfix">
+			{% news key="nodejs", pageSize=6,typeId="gu16MRzrk" %}
+			{% for item in nodejs %}
+			<!--				<li><a href="{{item.url}}" target="_blank">{{item.stitle}}</a></li>-->
+			<li>
+				<a href="javascript:;">
+					<img src="{{item.sImg}}"/>
+					<h4 class="f22">{{item.title}}</h4>
+					<p class="f14">{{item.discription}}</p>
+				</a>
+			</li>
+			{% endfor %}
+			<!--<li>
+                <a href="javascript:;" title="，提供的钱宝网APP设计与开发服务">
+                    <img src="picture/case01.jpg" alt=",出品的钱宝网作品|UI设计|APP设计|APP开发|手机客户端|html5/CSS3"/>
+                    <h4 class="f22">钱宝网宝购大厅移动端</h4>
+                    <p class="f14">钱宝网宝购大厅移动客户端基于Web App的设计与开发。钱宝网，前往未来的力量</p>
+                </a>
+            </li>
+            <li>
+                <a href="soon.html"title="，提供的和地利进出口贸易公司网站设计与开发服务">
+                    <img src="picture/case06.jpg" alt=",出品的南京和地利进出口贸易公司网站|网站建设|企业官网|网站设计|网站制作"/>
+                    <h4 class="f22">南京和地利进出口贸易公司网站</h4>
+                    <p class="f14">一家专业从事代理咨询服务的企业。江苏出入境检验检疫局和江苏省商务厅长期合作伙伴。</p>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" title="，提供的钱宝网APP设计与开发服务">
+                    <img src="picture/case03.jpg"  alt=",出品的钱宝网app雷拍频道|web app|APP设计|APP开发|手机客户端|html5/CSS3"/>
+                    <h4 class="f22">钱宝网雷拍频道移动端</h4>
+                    <p class="f14">钱宝网雷拍移动客户端基于Web App的设计与开发。钱宝网，前往未来的力量</p>
+                </a>
+            </li>
+            <li>
+                <a href="soon.html" title="，提供的最游轮旅行网站设计与开发服务">
+                    <img src="picture/case04.jpg" alt=",出品的最邮轮旅行网|旅游网站|网站设计|网站开发|html5/css3|用户体验设计"/>
+                    <h4 class="f22">最邮轮旅行网</h4>
+                    <p class="f14">最邮轮旅行网为你提供专业的全球邮轮中文预订服务，产品包括全球十大邮轮品牌、九大邮轮航线</p>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;"title="，提供的房禧通app客户端设计与开发服务">
+                    <img src="picture/case02.jpg" alt=",出品的房禧通app客户端|IOS开发|Android开发|app设计|UI设计|手机客户端|用户体验设计" />
+                    <h4 class="f22">房禧通App客户端</h4>
+                    <p class="f14">买房子、卖房子，更多房源就在房禧通。一键直达，您的专属房产经纪人</p>
+                </a>
+            </li>
+            <li>
+                <a href="soon.html"title="，提供的GDFS_全球免税跨境电商网站设计与开发服务">
+                    <img src="picture/case05.jpg" alt=",出品的GDFS_全球免税跨境电商网站|电商网站设计|电商网站开发|交互设计|用户体验设计" />
+                    <h4 class="f22">GDFS_全球免税跨境电商</h4>
+                    <p class="f14">GDFS全球免税跨境电商，为用户提供品质卓越的免税产品及会员服务</p>
+                </a>
+            </li>-->
+		</ul>
+	</div>
+</div>
+<!--//案例模块-->
+<!--联系模块-->
+<div class="Ued-index-contact">
+	<div class="container">
+		<h3 class="f32">让我们从沟通开始这次愉快的合作</h3>
+		<p class="f16">无论您的项目是处于萌芽阶段，还是已经上线需要听取一些改良意见，我们都愿闻其详。我们很擅长也很乐意帮助为客户的产品做一些事半功倍方面的交流见解。</p>
+		<p><span class="f22">Mobile: XXX</span><span class="f22">Mail: XXX</span></p>
+		<p class="btn-box"><a href="javascript:;" class="f16 comm-Btn Btn-red">QQ联系：XXX</a></p>
+	</div>
+</div>
+<!--//联系模块-->
+<!--评价模块-->
+<div class="Ued-clients bg-white">
+	<div class="container">
+		<h3 class="title-index"><span class="f32">客户的评价</span><em class="f16">What People Say</em><i></i></h3>
+		<!--轮播-->
+		<div id="Slider-say">
+			<div class="slick">
+				<div class="slidbox">
+					<h3 class="f32">“ 小而精的设计开发团队，全球视野的设计理念，关注设计到开发的每一个细节，让服务的产品更上一个台阶。”</h3>
+					<p class="f18">戴主席  &#8211;  南京软件谷促进会主席</p>
+				</div>
+				<div class="slidbox">
+					<h3 class="f32">“ 从用户角度出发，专注交互的细节，熟悉IOS及安卓的设计理念，在符合一定规划的原则至上进行创新设计，是一个很不错的团队。”</h3>
+					<p class="f18">苏总  &#8211;  钱宝网产品中心负责人</p>
+				</div>
+				<div class="slidbox">
+					<h3 class="f32">“ 非常感谢 优易迪 团队给我们的产品带来的帮助，其专业突出，作品让我十分满意！合作过程愉快，我乐于给大家推荐 优易迪。”</h3>
+					<p class="f18">Jason Sun  &#8211;  TecDash 产品主管</p>
+				</div>
+
+				<div class="slidbox">
+					<h3 class="f32">“ 与 优易迪 团队的合作从开始到结束都是一个愉快的过程。他们交付的工作满足了我们的要求，以及我们的产品，合作得非常顺利。”</h3>
+					<p class="f18">高总  &#8211;  移动游戏基地产品经理</p>
+				</div>
+			</div>
+		</div>
+		<!--//轮播-->
+	</div>
+</div>
+<!--//评价模块-->
+<!--合作伙伴模块-->
+<div class="Ued-friends">
+	<div class="container">
+		<ul class="friends-list clearfix">
+			<li><a href="#1"><img src="../../public/themes/dorawhite/images/picture/f_logo1.png" alt="中国移动" /></a></li>
+			<li><a href="#1"><img src="../../public/themes/dorawhite/images/picture/f_logo2.png" alt="苏宁易购"/></a></li>
+			<li><a href="#1"><img src="../../public/themes/dorawhite/images/picture/f_logo3.png" alt="钱宝网"/></a></li>
+			<li><a href="#1"><img src="../../public/themes/dorawhite/images/picture/f_logo4.png" alt="中国电信"/></a></li>
+			<li><a href="#1"><img src="../../public/themes/dorawhite/images/picture/f_logo5.png" alt="华为科技"/></a></li>
+			<li><a href="#1"><img src="../../public/themes/dorawhite/images/picture/f_logo6.png" alt="南京软件谷"/></a></li>
+			<li><a href="#1"><img src="../../public/themes/dorawhite/images/picture/f_logo7.png" alt="途牛网"/></a></li>
+			<li><a href="#1"><img src="../../public/themes/dorawhite/images/picture/f_logo8.png" alt="美的电器"/></a></li>
+		</ul>
+	</div>
+</div>
+<!--//合作伙伴模块-->
+<!--//主体-->
+	{% endblock %}

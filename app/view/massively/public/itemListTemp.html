@@ -1,0 +1,24 @@
+<div id="main">
+
+
+	<section class="posts">
+
+		{% for item in posts %}
+		<article>
+			<header>
+				<span class="date">{{item.date | formatDateForMini('date')}}</span>
+				<h2><a href="{{item.url}}">{{item.title}}</a></h2>
+			</header>
+			{% if item.sImg %}
+			<a href="{{item.url}}" class="image fit"><img src="{{item.sImg}}" alt="{{item.title}}" /></a>
+			{% endif %}
+			<p>{{item.discription}}</p>
+			<ul class="actions special">
+				<li><a href="{{item.url}}" class="button">Full Story</a></li>
+			</ul>
+		</article>
+		{% endfor %}
+
+	</section>
+</div>
+{% include "./pagination.html" %}
