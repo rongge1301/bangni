@@ -9,7 +9,8 @@
 /**
  * 服务器配置信息
  * @param  {String} env            [[必填]服务器环境 development:开发环境，production:生产环境]
- * @param  {String} mongodbBinPath [[必填]Mongodb bin目录路径，注意结尾必须带 / ，windows 环境下路径中 \ 必须改为 / 如 C:/mongodb/mongodb/bin/ ] * @param  {String} dbIP           [[必填]Mongodb 数据库IP，默认 127.0.0.1 默认不用更改]
+ * @param  {String} mongodbBinPath [[必填]Mongodb bin目录路径，注意结尾必须带 / ，windows 环境下路径中 \ 必须改为 / 如 C:/mongodb/mongodb/bin/ ]
+ * @param  {String} dbIP           [[必填]Mongodb 数据库IP，默认 127.0.0.1 默认不用更改]
  * @param  {String} dbPort         [[必填]Mongodb 数据库端口号，默认为 27017 默认不用更改]
  * @param  {String} dbName         [Mongodb 数据库名称，默认为 doracms2 默认不用更改]
  * @param  {String} dbUserName     [Mongodb 数据库用户名，没有可以不填，和 dbPassword 同时存在或同时为空]
@@ -22,8 +23,8 @@
 
 const serverConfig = {
     env: "development",
-    mongodbBinPath: "C:/Program Files/MongoDB/Server/4.4/bin/",
-    dbIP: "127.0.0.1",
+    mongodbBinPath: "/usr/local/mongodb/bin/",
+    dbIP: "106.14.38.221",
     dbPort: "27017",
     dbName: "doracms2",
     dbUserName: "",
