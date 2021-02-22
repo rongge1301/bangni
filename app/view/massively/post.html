@@ -1,0 +1,64 @@
+{% extends "./default.html" %}
+{% block content %}
+
+
+<!-- Everything inside the #post tags pulls data from the post -->
+
+<main id="main">
+
+    <section class="post">
+
+        <header class="major">
+            <span class="date">{{post.date | formatDateForMini('date')}}</span>
+            <h1>{{title}}</h1>
+            {% if post.discription %}
+            <p class="content">{{post.discription}}</p>
+            {% endif %}
+        </header>
+
+        {% if post.sImg %}
+        <div class="image main"><img src="{{post.sImg}}" alt="{{post.title}}" /></div>
+        {% endif %}
+
+        <div class="content">
+            {{post.comments | safe}}
+        </div>
+
+        <footer class="post-footer">
+
+            <div class="authors">
+                {% if post.uAuthor %}
+                <a class="author-box" href="/author/{{post.uAuthor._id}}">
+                    {% if post.uAuthor.logo %}
+                    <img class="author-profile-image" src="{{post.uAuthor.logo}}" alt="{{post.uAuthor.userName}}" />
+                    {% endif %}
+                    <section class="author-box-content">
+                        <div class="author-box-label">Author</div>
+                        <h5 class="author-box-name">{{post.uAuthor.userName}}</h5>
+
+                    </section>
+                </a>
+                {% endif %}
+            </div>
+
+        </footer>
+
+    </section>
+
+</main>
+
+
+
+<script>
+    var images = document.querySelectorAll('.kg-gallery-image img');
+    images.forEach(function (image) {
+        var container = image.closest('.kg-gallery-image');
+        var width = image.attributes.width.value;
+        var height = image.attributes.height.value;
+        var ratio = width / height;
+        container.style.flex = ratio + ' 1 0%';
+    })
+</script>
+
+
+{% endblock %}

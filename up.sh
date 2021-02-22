@@ -1,0 +1,1 @@
+scp -r ./* root@106.14.38.221:/usr/local/html

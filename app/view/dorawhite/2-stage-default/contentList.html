@@ -1,0 +1,59 @@
+{% extends "../default.html" %} {% block content %}
+
+<!--轮播模块-->
+<div id="Slider-case">
+    <div class="slick">
+        {% recommend pageSize=6 %}
+        {% for item in recommend %}
+        <div class="slidbox"  style="background-image:url({{item.sImg | replace('\\','/')}});">
+            <div class="container">
+                <div class="show-txtstyle-center fwhite f-family">
+                    <h1 class="f64">{{item.title}}</h1>
+                    <h1 class="f48">{{item.discription}}</h1>
+                </div>
+
+                <!--				<img src="{{item.sImg}}" alt="" style="position: absolute;left: 0;top:0;">-->
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<!--//轮播模块-->
+
+<!--------案例总--------->
+<div id="UedCases">
+    <!--分类-->
+    <div class="Ued-fix-sort">
+        <div class="container">
+            <ul class="f16" >
+                <li class="fxui-tab-tit"><a href="#1">全部</a></li>
+                <li class="fxui-tab-tit"><a href="#2">KISS&TELL</a></li>
+                <li class="fxui-tab-tit"><a href="#3" @click="alert(1)">P4</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--//分类-->
+    <!--案例列表-->
+    <div class="Ued-case bg-gray">
+        <div class="container" >
+            <!--全部-->
+            <ul class="case-list clearfix fxui-tab-nav">
+                {% news pageSize=100 %}
+                {% for item in news %}
+                <li>
+                    <a href="{{item.url}}">
+                        <img src="{{item.sImg}}" alt="kiss & tell"/>
+                        <h4 class="f22">{{item.stitle}}</h4>
+                        <p class="f14">{{item.discription}}</p>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+            <!--//全部-->
+        </div>
+    </div>
+    <!--//案例列表-->
+</div>
+<!--------//案例总--------->
+{% endblock %}
+
