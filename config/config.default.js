@@ -13,7 +13,7 @@ module.exports = appInfo => {
     cluster: {
       listen: {
         port: 8080,
-        hostname: '',
+        hostname: '106.14.38.221',
       }
     },
 
@@ -62,7 +62,7 @@ module.exports = appInfo => {
       defaultLocale: 'zh-CN',
     },
 
-    
+
 
     // cdn域名
     origin: 'https://cdn.html-js.cn',
@@ -133,7 +133,7 @@ module.exports = appInfo => {
       match: [ctx => ctx.path.startsWith('/manage/uploadFile'), ctx => ctx.path.startsWith('/api/upload/files'), ctx => ctx.path.startsWith('/api/upload/ueditor'), , ctx => ctx.path.startsWith('/api/upload/filePath')],
     },
 
-    
+
 
 
     // CONFIG_NORMALPLUGIN_BEGIN
