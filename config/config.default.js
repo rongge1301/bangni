@@ -14,6 +14,7 @@ module.exports = appInfo => {
       listen: {
         port: 8080,
         hostname: '106.14.38.221',
+        // hostname: '',
       }
     },
 
