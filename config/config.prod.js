@@ -33,8 +33,8 @@ module.exports = appInfo => {
             dir: '/home/doraData/logsdir/doracms',
         },
         // 服务地址配置
-        server_path: 'https://106.14.38.221',
-        server_api: 'https://106.14.38.221/api',
+        server_path: 'http://106.14.38.221',
+        server_api: 'http://106.14.38.221/api',
 
     }
 };
