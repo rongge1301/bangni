@@ -13,7 +13,7 @@ module.exports = appInfo => {
     cluster: {
       listen: {
         port: 8080,
-        hostname: 'bangni.com',
+        hostname: '106.14.38.221',
         // hostname: '',
       }
     },
