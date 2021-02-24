@@ -40,7 +40,7 @@ module.exports = appInfo => {
         // DEV_CONFIG_MODULES_END
         mongoose: {
             client: {
-        url: "mongodb://106.14.38.221:27017/doracms2",
+                url: "mongodb://106.14.38.221:27017/doracms2",
                 options: {
                     useCreateIndex: true,
                     useUnifiedTopology: true,
@@ -50,7 +50,7 @@ module.exports = appInfo => {
         },
         // mongodb相关路径
         mongodb: {
-        binPath: "/usr/local/mongodb/bin/",
+            binPath: "/usr/local/mongodb/bin/",
             backUpPath: path.join(appInfo.baseDir, 'databak/')
         },
         static: {
